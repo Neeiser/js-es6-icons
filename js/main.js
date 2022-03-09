@@ -1,3 +1,4 @@
+const iconsObjArr=
 [
 	{
 		name: 'cat',
@@ -112,6 +113,9 @@
 		color: 'blue'
 	}
 ];
+
+console.log(iconsObjArr)
+
 /*
 
 Milestone 1
