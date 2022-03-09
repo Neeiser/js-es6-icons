@@ -136,3 +136,5 @@ visualizzare solamente le icone corrispondenti.
 
 const container = document.getElementById('icons-container');
 
+const selector = document.getElementById('icons-type-selector');
+
