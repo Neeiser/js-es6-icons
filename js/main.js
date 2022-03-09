@@ -130,4 +130,5 @@ visualizzare solamente le icone corrispondenti.
 
 */
 
-function siteCreation ()
+const container = document.getElementById('icons-container');
+

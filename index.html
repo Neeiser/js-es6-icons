@@ -5,16 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Icons Filtering</title>
-
+    
+    <!-- Link to FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" >
     <!-- Link to the CSS -->
     <link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
-    <div class="container"></div>
+    <header>
+        <div class="kind-of-logo">
+          <h1>FontIcons</h1>
+        </div>
+        <div class="filter">
+          <p>Filtra per tipo
+            <select title="iconsTypeSelctor" name="iconsTypeSelctor" id="iconsTypeSelctor">
+              <option value="all">all</option>
+              <option value="animal">animal</option>
+              <option value="vegetable">vegetable</option>
+              <option value="user">user</option>
+            </select>
+          </p>
+        </div>
+      </header>
+      <main>
+        <div id="icons-container"></div>
+      </main>
 
-    
+
     <!-- Link to the JS/Data -->
-    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
