@@ -136,5 +136,44 @@ visualizzare solamente le icone corrispondenti.
 
 const container = document.getElementById('icons-container');
 
+
+/* 
+Spiegazione funzione: 
+- Creo una funzione che PER OGNI oggetto nell'arrey madre (iconsObjArr)
+  mi crea un div a cui attribuisco la classe box (presente su css)
+- Al div appena creato inserisco grazie al'innerHTML tutti i relativi valori,
+  specificati ad ogni ciclo grazie all'argomento (objArg)
+- Aggiungo sopra a tutto un innerHTML= "" per pulire la pagina.
+*/
+
+function insertIcon (allIconsArr, iconBoxes) {
+
+	iconBoxes.innerHTML= ""; //Pulire la pagina
+
+	allIconsArr.forEach((objArg) => {
+		const iconBox= document.createElement('div')
+		iconBox.classList.add('box')
+
+		iconBox.innerHTML=
+		`
+		<i class="${objArg.family} ${objArg.prefix}${objArg.name}" style="color: ${objArg.color}"></i>
+      	<span>${objArg.name}</span>
+		`
+
+		iconBoxes.append(iconBox)
+	});
+}
+
+/* 
+Spiegazione AZIONE funzione: 
+- Chiaramente la funzione non si esegue perchè non ho specificato a che variabili
+  essa deve eseguirsi.
+- Perciò chiamo la funzione e come argomenti passo le 2 variabili:
+  .iconsObjArr: in relazione all'argomento precedente 'allIconsArr'
+  .container:   in relazione all'argomento precedente 'iconBoxes'
+*/
+insertIcon (iconsObjArr, container)
+
+
 const selector = document.getElementById('icons-type-selector');
 
